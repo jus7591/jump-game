@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#game {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+}
+
+#character {
+  width: 20px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  top: 260px;
+  left: -190px;
+}
+.animate {
+  animation: jump 500ms;
+}
+
+@keyframes jump {
+  0% {
+    top: 260px;
+  }
+  30% {
+    top: 210px;
+  }
+  70% {
+    top: 210px;
+  }
+  100% {
+    top: 260px;
+  }
+}
+
+#block {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  position: relative;
+  top: 190px;
+  left: 240px;
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 240px;
+  }
+  100% {
+    left: -240px;
+  }
+}
+
+#scoreboard {
+  height: 50px;
+  width: 200px;
+  border: 1px solid black;
+  margin: 20px 0 0 20px;
+  border-radius: 10px;
+}
+
+#score {
+  margin: 5px 0 0 10px;
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#game-over {
+  background-color: darkgray;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#game-over-text {
+  font-size: 3rem;
+}
+
+#total-display {
+  font-size: 2rem;
+}
+
+#restart {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
